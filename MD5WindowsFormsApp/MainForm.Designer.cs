@@ -30,10 +30,11 @@ namespace MD5WindowsFormsApp
         private void InitializeComponent()
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.MD5Button = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.SHA256Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -44,15 +45,15 @@ namespace MD5WindowsFormsApp
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // button1
+            // MD5Button
             // 
-            this.button1.Location = new System.Drawing.Point(332, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Хэшировать в MD5";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.MD5Button.Location = new System.Drawing.Point(322, 31);
+            this.MD5Button.Name = "MD5Button";
+            this.MD5Button.Size = new System.Drawing.Size(136, 23);
+            this.MD5Button.TabIndex = 1;
+            this.MD5Button.Text = "Хэшировать в MD5";
+            this.MD5Button.UseVisualStyleBackColor = true;
+            this.MD5Button.Click += new System.EventHandler(this.button1_Click);
             // 
             // richTextBox2
             // 
@@ -80,15 +81,26 @@ namespace MD5WindowsFormsApp
             this.label2.TabIndex = 4;
             this.label2.Text = "Результат";
             // 
+            // SHA256Button
+            // 
+            this.SHA256Button.Location = new System.Drawing.Point(322, 72);
+            this.SHA256Button.Name = "SHA256Button";
+            this.SHA256Button.Size = new System.Drawing.Size(136, 23);
+            this.SHA256Button.TabIndex = 5;
+            this.SHA256Button.Text = "Хэшировать в SHA256";
+            this.SHA256Button.UseVisualStyleBackColor = true;
+            this.SHA256Button.Click += new System.EventHandler(this.SHA256Button_Click);
+            // 
             // ms5hash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SHA256Button);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.MD5Button);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ms5hash";
@@ -101,10 +113,11 @@ namespace MD5WindowsFormsApp
         #endregion
 
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button MD5Button;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button SHA256Button;
     }
 }
 
